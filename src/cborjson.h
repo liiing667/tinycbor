@@ -44,6 +44,10 @@ enum CborToJsonFlags
     CborConvertRequireMapStringKeys = 0,
     CborConvertStringifyMapKeys = 8,
 
+    /* Reject maps whose entries would produce duplicate JSON member names,
+     * including collisions caused by stringifying non-string keys. */
+    CborConvertRejectDuplicateKeys = 16,
+
     CborConvertDefaultFlags = 0
 };
 

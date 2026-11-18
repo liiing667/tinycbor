@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/liiing/feedback/uid24854/builddbg/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/builddbg/tools/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/builddbg/tools/cbordump/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/builddbg/tools/json2cbor/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

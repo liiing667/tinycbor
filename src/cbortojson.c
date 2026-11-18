@@ -137,6 +137,14 @@
  * active, it is possible that a non-string key in a CBOR map will be converted
  * to a string form that is identical to another key.
  *
+ * If the CborConvertRejectDuplicateKeys option is active, the conversion
+ * keeps a record of every key already written to each JSON object and fails
+ * with CborErrorDuplicateObjectKeys as soon as another entry would produce an
+ * identical key, whether because the map genuinely contains a duplicated key
+ * or because stringifying a non-string key collides with an existing key.
+ * This provides a decidable, fail-closed map view: a JSON object is produced
+ * only when every member name is unique.
+ *
  * \par
  * When metadata support is active, the conversion will add extra key-value
  * pairs to the JSON output so it can store the metadata. It is possible that
@@ -571,14 +579,64 @@ static CborError array_to_json(FILE *out, CborValue *it, int flags, int nestingL
     return CborNoError;
 }
 
+typedef struct JsonKeySet {
+    char **keys;
+    size_t count;
+} JsonKeySet;
+
+static void json_key_set_free(JsonKeySet *set)
+{
+    size_t i;
+    for (i = 0; i < set->count; ++i)
+        cbor_free(set->keys[i]);
+    cbor_free(set->keys);
+}
+
+/*
+ * Records that another entry with this (already JSON-escaped) key exists in
+ * the current map. Returns CborErrorDuplicateObjectKeys if an identical key
+ * was already recorded, so callers can fail closed instead of emitting a JSON
+ * object with duplicate members. Comparing the escaped forms means a
+ * stringified non-string key that collides with a text key (or with another
+ * stringified key) is rejected as well.
+ */
+static CborError json_key_set_add(JsonKeySet *set, const char *key)
+{
+    size_t i;
+    char **grown;
+
+    for (i = 0; i < set->count; ++i) {
+        if (strcmp(set->keys[i], key) == 0)
+            return CborErrorDuplicateObjectKeys;
+    }
+
+    grown = (char **)cbor_realloc(set->keys, (set->count + 1) * sizeof(char *));
+    if (!grown)
+        return CborErrorOutOfMemory;
+    set->keys = grown;
+
+    set->keys[set->count] = strdup(key);
+    if (!set->keys[set->count])
+        return CborErrorOutOfMemory;
+    ++set->count;
+    return CborNoError;
+}
+
 static CborError map_to_json(FILE *out, CborValue *it, int flags, int nestingLevel, ConversionStatus *status)
 {
     const char *comma = "";
     CborError err;
+    JsonKeySet keySet;
+
+    keySet.keys = NULL;
+    keySet.count = 0;
+
     while (!cbor_value_at_end(it)) {
         char *key = NULL;
-        if (fprintf(out, "%s", comma) < 0)
+        if (fprintf(out, "%s", comma) < 0) {
+            json_key_set_free(&keySet);
             return CborErrorIO;
+        }
         comma = ",";
 
         CborType keyType = cbor_value_get_type(it);
@@ -587,14 +645,28 @@ static CborError map_to_json(FILE *out, CborValue *it, int flags, int nestingLev
         } else if (flags & CborConvertStringifyMapKeys) {
             err = stringify_map_key(&key, it, flags, keyType);
         } else {
+            json_key_set_free(&keySet);
             return CborErrorJsonObjectKeyNotString;
         }
-        if (err)
+        if (err) {
+            json_key_set_free(&keySet);
             return err;
+        }
+
+        if (flags & CborConvertRejectDuplicateKeys) {
+            /* fail closed before emitting anything for this map entry */
+            err = json_key_set_add(&keySet, key);
+            if (err) {
+                cbor_free(key);
+                json_key_set_free(&keySet);
+                return err;
+            }
+        }
 
         /* first, print the key */
         if (fprintf(out, "\"%s\":", key) < 0) {
             cbor_free(key);
+            json_key_set_free(&keySet);
             return CborErrorIO;
         }
 
@@ -617,9 +689,12 @@ static CborError map_to_json(FILE *out, CborValue *it, int flags, int nestingLev
         }
 
         cbor_free(key);
-        if (err)
+        if (err) {
+            json_key_set_free(&keySet);
             return err;
+        }
     }
+    json_key_set_free(&keySet);
     return CborNoError;
 }
 
@@ -778,6 +853,9 @@ static CborError value_to_json(FILE *out, CborValue *it, int flags, CborType typ
  * \value CborConvertByteStringsToBase64Url Force the conversion of all CBOR byte strings to Base64url encoding, despite any tags
  * \value CborConvertRequireMapStringKeys (default) Require CBOR map keys to be strings, failing the conversion if they are not
  * \value CborConvertStringifyMapKeys   Convert non-string keys in CBOR maps to a string form
+ * \value CborConvertRejectDuplicateKeys Fail with CborErrorDuplicateObjectKeys when a map would
+ *                                       produce duplicate JSON member names, instead of emitting
+ *                                       duplicate fields or colliding stringified keys
  * \value CborConvertDefaultFlags       Default conversion flags.
  */
 

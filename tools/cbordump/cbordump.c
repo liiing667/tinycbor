@@ -91,7 +91,7 @@ int main(int argc, char **argv)
     int json_flags = CborConvertDefaultFlags;
     int cbor_flags = CborPrettyDefaultFlags;
     int c;
-    while ((c = getopt(argc, argv, "MOSUcjhfn")) != -1) {
+    while ((c = getopt(argc, argv, "DMOSUcjhfn")) != -1) {
         switch (c) {
         case 'c':
             printJson = false;
@@ -119,6 +119,9 @@ int main(int argc, char **argv)
         case 'U':
             json_flags |= CborConvertByteStringsToBase64Url;
             break;
+        case 'D':
+            json_flags |= CborConvertRejectDuplicateKeys;
+            break;
 
         case '?':
             fprintf(stderr, "Unknown option -%c.\n", optopt);
@@ -135,6 +138,7 @@ int main(int argc, char **argv)
                  " -M       Add metadata so converting back to CBOR is possible\n"
                  " -O       Convert CBOR tags to JSON objects\n"
                  " -S       Stringify non-text string map keys\n"
+                 " -D       Fail if a map produces duplicate JSON member names\n"
                  " -U       Convert all CBOR byte strings to Base64url regardless of tags\n"
                  "When CBOR dump is active, the following options are recognized:\n"
                  " -f       Show text and byte string fragments\n"

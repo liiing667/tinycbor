@@ -1,0 +1,1527 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/uname"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/uname"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/uname"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/uname"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/uname"
+      - "/home/liiing/.local/bin/uname"
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+      - "/usr/sbin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:27 (project)"
+    message: |
+      The system is: Linux - 6.18.33.2-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/gmake"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/gmake"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/gmake"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/gmake"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/gmake"
+      - "/home/liiing/.local/bin/gmake"
+      - "/usr/local/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/sbin/gmake"
+    found: "/usr/bin/gmake"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/cc"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/cc"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/cc"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/cc"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/cc"
+      - "/home/liiing/.local/bin/cc"
+      - "/usr/local/sbin/cc"
+      - "/usr/local/bin/cc"
+      - "/usr/sbin/cc"
+    found: "/usr/bin/cc"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/usr/share/cmake-4.2/Modules/"
+    found: "/usr/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:27 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/4.2.3/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/ar"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/ranlib"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/strip"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/ld"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/nm"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/objdump"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/objcopy"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/readelf"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/usr/bin/dlltool"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/dlltool"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/dlltool"
+      - "/home/liiing/.local/bin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+      - "/snap/bin/dlltool"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    found: "/usr/bin/addr2line"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/usr/bin/tapi"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/tapi"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/tapi"
+      - "/home/liiing/.local/bin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+      - "/snap/bin/tapi"
+    found: false
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-15.2"
+      - "gcc-ar-15"
+      - "gcc-ar15"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ar-15.2"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/gcc-ar-15.2"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/gcc-ar-15.2"
+      - "/home/liiing/.local/bin/gcc-ar-15.2"
+      - "/usr/local/sbin/gcc-ar-15.2"
+      - "/usr/local/bin/gcc-ar-15.2"
+      - "/usr/sbin/gcc-ar-15.2"
+      - "/sbin/gcc-ar-15.2"
+      - "/bin/gcc-ar-15.2"
+      - "/snap/bin/gcc-ar-15.2"
+    found: "/usr/bin/gcc-ar-15"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:27 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-15.2"
+      - "gcc-ranlib-15"
+      - "gcc-ranlib15"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/bin/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+    searched_directories:
+      - "/usr/bin/gcc-ranlib-15.2"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/gcc-ranlib-15.2"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/gcc-ranlib-15.2"
+      - "/home/liiing/.local/bin/gcc-ranlib-15.2"
+      - "/usr/local/sbin/gcc-ranlib-15.2"
+      - "/usr/local/bin/gcc-ranlib-15.2"
+      - "/usr/sbin/gcc-ranlib-15.2"
+      - "/sbin/gcc-ranlib-15.2"
+      - "/bin/gcc-ranlib-15.2"
+      - "/snap/bin/gcc-ranlib-15.2"
+    found: "/usr/bin/gcc-ranlib-15"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:27 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-YqPTg0"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-YqPTg0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-YqPTg0'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9f1d7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9f1d7.dir/build.make CMakeFiles/cmTC_9f1d7.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-YqPTg0'
+        Building C object CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 15.2.0-16ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-15/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2,rust,cobol,algol68 --prefix=/usr --with-gcc-major-version-only --program-suffix=-15 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9f1d7.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_9f1d7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccNJ4Wyp.s
+        GNU C23 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/15/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/15/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/15/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: edd70396dcc669433a92073f97309866
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9f1d7.dir/'
+         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o /tmp/ccNJ4Wyp.s
+        GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_9f1d7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f1d7.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 15.2.0-16ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-15/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2,rust,cobol,algol68 --prefix=/usr --with-gcc-major-version-only --program-suffix=-15 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9f1d7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_9f1d7.'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYBcI4r.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_9f1d7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        collect2 version 15.2.0
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYBcI4r.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_9f1d7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Ubuntu) 2.46
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9f1d7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_9f1d7.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o -o cmTC_9f1d7
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-YqPTg0'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:27 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/15/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/15/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/15/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/15/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:27 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-YqPTg0']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9f1d7/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_9f1d7.dir/build.make CMakeFiles/cmTC_9f1d7.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-YqPTg0']
+        ignore line: [Building C object CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 15.2.0-16ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-15/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 rust cobol algol68 --prefix=/usr --with-gcc-major-version-only --program-suffix=-15 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9f1d7.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_9f1d7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccNJ4Wyp.s]
+        ignore line: [GNU C23 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/15/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/15/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/15/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/15/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: edd70396dcc669433a92073f97309866]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9f1d7.dir/']
+        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o /tmp/ccNJ4Wyp.s]
+        ignore line: [GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_9f1d7]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f1d7.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 15.2.0-16ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-15/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 rust cobol algol68 --prefix=/usr --with-gcc-major-version-only --program-suffix=-15 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-15-j35TAX/gcc-15-15.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9f1d7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_9f1d7.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYBcI4r.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_9f1d7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/15/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccYBcI4r.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_9f1d7] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/15/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../..]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [collect2 version 15.2.0]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYBcI4r.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_9f1d7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_9f1d7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15] ==> [/usr/lib/gcc/x86_64-linux-gnu/15]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/15/../../..] ==> [/usr/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/15;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "/usr/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:27 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Ubuntu) 2.46
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/CheckCompilerFlag.cmake:124 (cmake_check_compiler_flag)"
+      - "/usr/share/cmake-4.2/Modules/GenerateExportHeader.cmake:519 (check_compiler_flag)"
+      - "/usr/share/cmake-4.2/Modules/GenerateExportHeader.cmake:693 (_test_compiler_hidden_visibility)"
+      - "CMakeLists.txt:129 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_HIDDEN_VISIBILITY"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-wPmE5f"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-wPmE5f"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/liiing/feedback/uid24854/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_HIDDEN_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-wPmE5f'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e82f9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e82f9.dir/build.make CMakeFiles/cmTC_e82f9.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-wPmE5f'
+        Building C object CMakeFiles/cmTC_e82f9.dir/src.c.o
+        /usr/bin/cc -DCOMPILER_HAS_HIDDEN_VISIBILITY  -fvisibility=hidden -o CMakeFiles/cmTC_e82f9.dir/src.c.o -c /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-wPmE5f/src.c
+        Linking C executable cmTC_e82f9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e82f9.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_e82f9.dir/src.c.o -o cmTC_e82f9
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-wPmE5f'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/CheckCompilerFlag.cmake:124 (cmake_check_compiler_flag)"
+      - "/usr/share/cmake-4.2/Modules/GenerateExportHeader.cmake:520 (check_compiler_flag)"
+      - "/usr/share/cmake-4.2/Modules/GenerateExportHeader.cmake:693 (_test_compiler_hidden_visibility)"
+      - "CMakeLists.txt:129 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-0Vi5XN"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-0Vi5XN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/liiing/feedback/uid24854/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_HIDDEN_INLINE_VISIBILITY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-0Vi5XN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5bc23/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5bc23.dir/build.make CMakeFiles/cmTC_5bc23.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-0Vi5XN'
+        Building C object CMakeFiles/cmTC_5bc23.dir/src.c.o
+        /usr/bin/cc -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -fvisibility-inlines-hidden -o CMakeFiles/cmTC_5bc23.dir/src.c.o -c /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-0Vi5XN/src.c
+        cc1: warning: command-line option '-fvisibility-inlines-hidden' is valid for C++/ObjC++ but not for C
+        Linking C executable cmTC_5bc23
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5bc23.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_5bc23.dir/src.c.o -o cmTC_5bc23
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-0Vi5XN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CheckSourceCompiles.cmake:205 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/GenerateExportHeader.cmake:488 (check_source_compiles)"
+      - "/usr/share/cmake-4.2/Modules/GenerateExportHeader.cmake:550 (_check_c_compiler_attribute)"
+      - "/usr/share/cmake-4.2/Modules/GenerateExportHeader.cmake:694 (_test_compiler_has_deprecated)"
+      - "CMakeLists.txt:129 (generate_export_header)"
+    checks:
+      - "Performing Test COMPILER_HAS_DEPRECATED_ATTR"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/liiing/feedback/uid24854/cmake"
+    buildResult:
+      variable: "COMPILER_HAS_DEPRECATED_ATTR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_97d88/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_97d88.dir/build.make CMakeFiles/cmTC_97d88.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN'
+        Building C object CMakeFiles/cmTC_97d88.dir/src.c.o
+        /usr/bin/cc -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTC_97d88.dir/src.c.o -c /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN/src.c
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN/src.c: In function ‘main’:
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN/src.c:2:5: warning: ‘somefunc’ is deprecated [-Wdeprecated-declarations]
+            2 |     int main(void) { return somefunc();}
+              |     ^~~
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN/src.c:1:37: note: declared here
+            1 | __attribute__((__deprecated__)) int somefunc(void) { return 0; }
+              |                                     ^~~~~~~~
+        Linking C executable cmTC_97d88
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97d88.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_97d88.dir/src.c.o -o cmTC_97d88
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-vJK8HN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CheckSymbolExists.cmake:193 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CheckSymbolExists.cmake:98 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:142 (check_symbol_exists)"
+    checks:
+      - "Looking for open_memstream"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CcymEv"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CcymEv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/liiing/feedback/uid24854/cmake"
+    buildResult:
+      variable: "HAVE_OPEN_MEMSTREAM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CcymEv'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c22e9/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c22e9.dir/build.make CMakeFiles/cmTC_c22e9.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CcymEv'
+        Building C object CMakeFiles/cmTC_c22e9.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_c22e9.dir/CheckSymbolExists.c.o -c /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CcymEv/CheckSymbolExists.c
+        Linking C executable cmTC_c22e9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c22e9.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_c22e9.dir/CheckSymbolExists.c.o -o cmTC_c22e9
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CcymEv'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:151 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_OPEN_FUNOPEN"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/liiing/feedback/uid24854/cmake"
+    buildResult:
+      variable: "HAVE_OPEN_FUNOPEN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d1f7e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d1f7e.dir/build.make CMakeFiles/cmTC_d1f7e.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y'
+        Building C object CMakeFiles/cmTC_d1f7e.dir/src.c.o
+        /usr/bin/cc -DHAVE_OPEN_FUNOPEN  -Werror=incompatible-pointer-types -o CMakeFiles/cmTC_d1f7e.dir/src.c.o -c /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y/src.c
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y/src.c: In function ‘main’:
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y/src.c:5:18: error: implicit declaration of function ‘funopen’; did you mean ‘fdopen’? [-Wimplicit-function-declaration]
+            5 | int main(void) { funopen(NULL, NULL, write_fn, NULL, close_fn); return 0; }
+              |                  ^~~~~~~
+              |                  fdopen
+        gmake[1]: *** [CMakeFiles/cmTC_d1f7e.dir/build.make:81: CMakeFiles/cmTC_d1f7e.dir/src.c.o] Error 1
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-xfnY8Y'
+        gmake: *** [Makefile:134: cmTC_d1f7e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:158 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_OPEN_FUNOPEN_SSIZE"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/liiing/feedback/uid24854/cmake"
+    buildResult:
+      variable: "HAVE_OPEN_FUNOPEN_SSIZE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_903fd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_903fd.dir/build.make CMakeFiles/cmTC_903fd.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY'
+        Building C object CMakeFiles/cmTC_903fd.dir/src.c.o
+        /usr/bin/cc -DHAVE_OPEN_FUNOPEN_SSIZE  -Werror=incompatible-pointer-types -o CMakeFiles/cmTC_903fd.dir/src.c.o -c /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY/src.c
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY/src.c: In function ‘main’:
+        /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY/src.c:6:18: error: implicit declaration of function ‘funopen’; did you mean ‘fdopen’? [-Wimplicit-function-declaration]
+            6 | int main(void) { funopen(NULL, NULL, write_fn, NULL, close_fn); return 0; }
+              |                  ^~~~~~~
+              |                  fdopen
+        gmake[1]: *** [CMakeFiles/cmTC_903fd.dir/build.make:81: CMakeFiles/cmTC_903fd.dir/src.c.o] Error 1
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-CyXrdY'
+        gmake: *** [Makefile:134: cmTC_903fd/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/CheckSymbolExists.cmake:193 (try_compile)"
+      - "/usr/share/cmake-4.2/Modules/CheckSymbolExists.cmake:98 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:168 (check_symbol_exists)"
+    checks:
+      - "Looking for fopencookie"
+    directories:
+      source: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-ExvHuE"
+      binary: "/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-ExvHuE"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/liiing/feedback/uid24854/cmake"
+    buildResult:
+      variable: "HAVE_OPEN_FOPENCOOKIE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-ExvHuE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_43ea7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_43ea7.dir/build.make CMakeFiles/cmTC_43ea7.dir/build
+        gmake[1]: Entering directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-ExvHuE'
+        Building C object CMakeFiles/cmTC_43ea7.dir/CheckSymbolExists.c.o
+        /usr/bin/cc    -o CMakeFiles/cmTC_43ea7.dir/CheckSymbolExists.c.o -c /home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-ExvHuE/CheckSymbolExists.c
+        Linking C executable cmTC_43ea7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43ea7.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_43ea7.dir/CheckSymbolExists.c.o -o cmTC_43ea7
+        gmake[1]: Leaving directory '/home/liiing/feedback/uid24854/builddbg/CMakeFiles/CMakeScratch/TryCompile-ExvHuE'
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake-4.2/Modules/FindPkgConfig.cmake:517 (find_program)"
+      - "tools/json2cbor/CMakeLists.txt:3 (include)"
+    mode: "program"
+    variable: "PKG_CONFIG_EXECUTABLE"
+    description: "pkg-config executable"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pkg-config"
+      - "pkgconf"
+    candidate_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/"
+      - "/home/liiing/.local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/snap/bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/pkg-config"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/bin/pkgconf"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/pkg-config"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/sbin/pkgconf"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/pkg-config"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr/pkgconf"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/pkg-config"
+      - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path/pkgconf"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/pkg-config"
+      - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1/pkgconf"
+      - "/home/liiing/.local/bin/pkg-config"
+      - "/home/liiing/.local/bin/pkgconf"
+      - "/usr/local/sbin/pkg-config"
+      - "/usr/local/sbin/pkgconf"
+      - "/usr/local/bin/pkg-config"
+      - "/usr/local/bin/pkgconf"
+      - "/usr/sbin/pkg-config"
+      - "/usr/sbin/pkgconf"
+    found: "/usr/bin/pkg-config"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/liiing/.codex-relay-home-xg_r33sr/local/root/usr"
+      ENV{PATH}:
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.codex-relay-home-xg_r33sr/.codex-cli/tmp/arg0/codex-arg0tHFvx1"
+        - "/home/liiing/.codex/packages/standalone/releases/0.156.1-x86_64-unknown-linux-musl/codex-path"
+        - "/home/liiing/.local/bin"
+        - "/home/liiing/.local/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/snap/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...

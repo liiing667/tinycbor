@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+05518185827794a67062b9d965ce0fe5 tests/cpp/CMakeFiles/tst_cpp_autogen
+2d8ba29cd5212cf0e0506c0624be33cb tests/cpp/tst_cpp_autogen/timestamp
+bb074612b9efd6e26c6cffcbafa47954 tests/encoder/CMakeFiles/tst_encoder_autogen
+5759647b612a1aba9cd6e62168988d75 tests/encoder/tst_encoder_autogen/timestamp
+8b4ae33d48ad132573bc976f977337ea tests/parser/CMakeFiles/tst_parser_autogen
+38939182218e7af2408cddc7cb75d269 tests/parser/tst_parser_autogen/timestamp
+59b59198a128bd6f022ff71ce2cf724d tests/pretty/CMakeFiles/tst_pretty_autogen
+72509cf65c3752a90a8f8b254353ebd9 tests/pretty/tst_pretty_autogen/timestamp
+24c303e9525aab554646c51f300da2af tests/tojson/CMakeFiles/tst_tojson_autogen
+b82cbac5f8779087f8727a45bd5d9320 tests/tojson/tst_tojson_autogen/timestamp

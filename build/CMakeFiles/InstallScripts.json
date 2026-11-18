@@ -1,0 +1,17 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/liiing/feedback/uid24854/build/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tests/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tests/c90/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tests/cpp/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tests/encoder/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tests/parser/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tests/pretty/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tests/tojson/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tools/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tools/cbordump/cmake_install.cmake",
+		"/home/liiing/feedback/uid24854/build/tools/json2cbor/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -67,6 +67,8 @@ private slots:
     void nestedMaps();
     void nonStringKeyMaps_data();
     void nonStringKeyMaps();
+    void keyCollisions_data();
+    void keyCollisions();
 
     void tagsToObjects_data();
     void tagsToObjects();
@@ -495,6 +497,81 @@ void tst_ToJson::nonStringKeyMaps()
     cbor_parser_init(reinterpret_cast<const quint8 *>(data.constData()), data.length(), 0, &parser, &first);
     CborError err = parseOne(&first, &decoded, CborConvertRequireMapStringKeys);
     QCOMPARE(err, CborErrorJsonObjectKeyNotString);
+}
+
+void tst_ToJson::keyCollisions_data()
+{
+    QTest::addColumn<QByteArray>("data");
+    QTest::addColumn<QString>("expected");
+    QTest::addColumn<int>("flags");
+    QTest::addColumn<bool>("shouldFail");
+
+    // map {"a":1,"a":2}: duplicate text keys
+    QTest::newRow("duplicate-text-keys")
+        << raw("\xa2\x61" "a\x01\x61" "a\x02")
+        << QStringLiteral("{\"a\":1,\"a\":2}")
+        << int(0) << true;
+
+    // same map, with the duplicate hidden in a nested container
+    QTest::newRow("duplicate-text-keys-nested")
+        << raw("\xa1\x61z\xa2\x61" "a\x01\x61" "a\x02")
+        << QStringLiteral("{\"z\":{\"a\":1,\"a\":2}}")
+        << int(0) << true;
+
+    // escaping must still be applied before the duplicate comparison
+    QTest::newRow("duplicate-escaped-keys")
+        << raw("\xa2\x61\"\x01\x61\"\x02")
+        << QStringLiteral("{\"\\\"\":1,\"\\\"\":2}")
+        << int(0) << true;
+
+    // integer key 1 stringifies to "1", colliding with the text key "1"
+    QTest::newRow("stringified-key-collision")
+        << raw("\xa2\x01\x01\x61\x31\x02")
+        << QStringLiteral("{\"1\":1,\"1\":2}")
+        << int(CborConvertStringifyMapKeys) << true;
+
+    // two distinct non-string keys (1 and 1.0) stringify differently,
+    // so they are not a collision and must keep converting successfully
+    QTest::newRow("stringified-distinct-keys")
+        << raw("\xa2\x01\x01\xfb\x3f\xf0\x00\x00\x00\x00\x00\x00\x02")
+        << QStringLiteral("{\"1\":1,\"1.\":2}")
+        << int(CborConvertStringifyMapKeys) << false;
+
+    // every key unique: the safe view must accept the same legal vectors
+    QTest::newRow("unique-text-keys")
+        << raw("\xa2\x61" "a\x01\x61" "b\x02")
+        << QStringLiteral("{\"a\":1,\"b\":2}")
+        << int(0) << false;
+    QTest::newRow("unique-mixed-keys")
+        << raw("\xa2\x01\x01\x61" "b\x02")
+        << QStringLiteral("{\"1\":1,\"b\":2}")
+        << int(CborConvertStringifyMapKeys) << false;
+}
+
+void tst_ToJson::keyCollisions()
+{
+    QFETCH(QByteArray, data);
+    QFETCH(QString, expected);
+    QFETCH(int, flags);
+    QFETCH(bool, shouldFail);
+
+    // legacy behavior is preserved when the safe view is not requested
+    compareOne(data, expected, flags);
+
+    // the safe map view fails closed on duplicate / colliding member names,
+    // while unique-key vectors keep producing byte-identical JSON
+    CborParser parser;
+    CborValue first;
+    QString decoded;
+    QVERIFY(!cbor_parser_init(reinterpret_cast<const quint8 *>(data.constData()),
+                              data.length(), 0, &parser, &first));
+    CborError err = parseOne(&first, &decoded, flags | CborConvertRejectDuplicateKeys);
+    if (!shouldFail) {
+        QCOMPARE(decoded, expected);
+        QCOMPARE(err, CborNoError);
+    } else {
+        QCOMPARE(err, CborErrorDuplicateObjectKeys);
+    }
 }
 
 void tst_ToJson::tagsToObjects_data()
