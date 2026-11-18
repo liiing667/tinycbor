@@ -798,15 +798,85 @@ static CborError value_to_json(FILE *out, CborValue *it, int flags, CborType typ
  * code similar to CborParsing. The \a flags parameter indicates one or more of
  * the flags from CborToJsonFlags that control the conversion.
  *
+ * This function is equivalent to calling cbor_value_to_json_advance_budget()
+ * with the compile-time recursion limit (CBOR_PARSER_MAX_RECURSIONS) and no
+ * output size limit.
+ *
  * If no error ocurred, this function advances \a value to the next element.
  *
- * \sa cbor_value_to_json(), cbor_value_to_pretty_advance()
+ * \sa cbor_value_to_json(), cbor_value_to_json_advance_budget(),
+ * cbor_value_to_pretty_advance()
  */
 CborError cbor_value_to_json_advance(FILE *out, CborValue *value, int flags)
 {
+    return cbor_value_to_json_advance_budget(out, value, flags, -1, 0);
+}
+
+/**
+ * Converts the current CBOR type pointed to by \a value to JSON and writes that
+ * to the \a out stream, subject to the runtime budgets \a max_recursions and
+ * \a max_output_bytes. If an error occurs, this function returns an error
+ * code similar to CborParsing. The \a flags parameter indicates one or more of
+ * the flags from CborToJsonFlags that control the conversion.
+ *
+ * The \a max_recursions parameter limits how deeply nested containers and
+ * tags may be before the conversion fails with CborErrorNestingTooDeep,
+ * allowing callers handling untrusted input to select a smaller budget than
+ * the compile-time default. If \a max_recursions is negative, the compile-time
+ * default (CBOR_PARSER_MAX_RECURSIONS) is used.
+ *
+ * The \a max_output_bytes parameter limits how many bytes of JSON this
+ * function will produce. If the converted output would exceed this budget,
+ * the conversion fails with CborErrorDataTooLarge. If \a max_output_bytes is
+ * zero, no output size limit is applied.
+ *
+ * The conversion is transactional: the JSON text is staged in memory and is
+ * only written to the \a out stream if the conversion succeeds and is within
+ * budget. If this function returns an error, no bytes will have been written
+ * to \a out (unless the library was compiled with WITHOUT_OPEN_MEMSTREAM, in
+ * which case the output is streamed directly and \a max_output_bytes cannot
+ * be enforced).
+ *
+ * If no error ocurred, this function advances \a value to the next element.
+ *
+ * \sa cbor_value_to_json_advance(), cbor_value_to_json_budget()
+ */
+CborError cbor_value_to_json_advance_budget(FILE *out, CborValue *value, int flags,
+                                            int max_recursions, size_t max_output_bytes)
+{
     ConversionStatus status;
-    return value_to_json(out, value, flags, cbor_value_get_type(value), CBOR_PARSER_MAX_RECURSIONS,
-                         &status);
+
+    if (max_recursions < 0)
+        max_recursions = CBOR_PARSER_MAX_RECURSIONS;
+
+#ifdef WITHOUT_OPEN_MEMSTREAM
+    /* Without open_memstream() we cannot stage the output, so the conversion
+     * is streamed directly and the output byte budget cannot be enforced. */
+    (void)max_output_bytes;
+    return value_to_json(out, value, flags, cbor_value_get_type(value), max_recursions, &status);
+#else
+    /* Stage the full conversion in a memory stream, so that on failure
+     * (including budget overruns) no partial JSON is committed to \a out. */
+    char *buffer;
+    size_t size;
+    CborError err;
+    FILE *staged = open_memstream(&buffer, &size);
+    if (staged == NULL)
+        return CborErrorOutOfMemory;
+
+    err = value_to_json(staged, value, flags, cbor_value_get_type(value), max_recursions, &status);
+    if (fclose(staged) < 0 && err == CborNoError)
+        err = CborErrorIO;
+
+    if (err == CborNoError && max_output_bytes != 0 && size > max_output_bytes)
+        err = CborErrorDataTooLarge;
+
+    if (err == CborNoError && size != 0 && fwrite(buffer, size, 1, out) != 1)
+        err = CborErrorIO;
+
+    free(buffer);
+    return err;
+#endif
 }
 
 /** @} */

@@ -1,0 +1,34 @@
+Start testing: Nov 18 08:49 CST
+----------------------------------------------------------
+1/2 Testing: tst_c90
+1/2 Test: tst_c90
+Command: "/home/liiing/feedback/uid24855/build/tests/c90/tst_c90"
+Directory: /home/liiing/feedback/uid24855/build/tests/c90
+"tst_c90" start time: Nov 18 08:49 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"tst_c90" end time: Nov 18 08:49 CST
+"tst_c90" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: tst_tojsonbudget
+2/2 Test: tst_tojsonbudget
+Command: "/home/liiing/feedback/uid24855/build/tests/tojsonbudget/tst_tojsonbudget"
+Directory: /home/liiing/feedback/uid24855/build/tests/tojsonbudget
+"tst_tojsonbudget" start time: Nov 18 08:49 CST
+Output:
+----------------------------------------------------------
+all checks passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"tst_tojsonbudget" end time: Nov 18 08:49 CST
+"tst_tojsonbudget" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 18 08:49 CST

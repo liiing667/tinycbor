@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/liiing/feedback/uid24855/build/cmake_install.cmake",
+		"/home/liiing/feedback/uid24855/build/tests/cmake_install.cmake",
+		"/home/liiing/feedback/uid24855/build/tests/c90/cmake_install.cmake",
+		"/home/liiing/feedback/uid24855/build/tests/tojsonbudget/cmake_install.cmake",
+		"/home/liiing/feedback/uid24855/build/tools/cmake_install.cmake",
+		"/home/liiing/feedback/uid24855/build/tools/cbordump/cmake_install.cmake",
+		"/home/liiing/feedback/uid24855/build/tools/json2cbor/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -54,6 +54,15 @@ CBOR_INLINE_API CborError cbor_value_to_json(FILE *out, const CborValue *value, 
     return cbor_value_to_json_advance(out, &copy, flags);
 }
 
+CBOR_API CborError cbor_value_to_json_advance_budget(FILE *out, CborValue *value, int flags,
+                                                     int max_recursions, size_t max_output_bytes);
+CBOR_INLINE_API CborError cbor_value_to_json_budget(FILE *out, const CborValue *value, int flags,
+                                                    int max_recursions, size_t max_output_bytes)
+{
+    CborValue copy = *value;
+    return cbor_value_to_json_advance_budget(out, &copy, flags, max_recursions, max_output_bytes);
+}
+
 #ifdef __cplusplus
 }
 #endif

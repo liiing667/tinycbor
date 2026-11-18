@@ -3,6 +3,10 @@
 include(TinyCBORHelpers)
 add_subdirectory(c90)
 
+if(WITH_CBOR2JSON)
+  add_subdirectory(tojsonbudget)
+endif()
+
 if(WITH_FREESTANDING OR NOT WITH_FLOATING_POINT)
   return()
 endif()

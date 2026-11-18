@@ -90,6 +90,12 @@ private slots:
 
     void recursionLimit_data();
     void recursionLimit();
+    void runtimeRecursionLimit_data();
+    void runtimeRecursionLimit();
+    void outputBudget_data();
+    void outputBudget();
+    void noPartialOutput_data();
+    void noPartialOutput();
     void invalidUtf8Strings_data();
     void invalidUtf8Strings();
 };
@@ -246,13 +252,13 @@ void addEmptyContainersData()
     QTest::newRow("_emptymap") << raw("\xbf\xff") << "{}";
 }
 
-CborError parseOne(CborValue *it, QString *parsed, int flags)
+CborError parseOneBudget(CborValue *it, QString *parsed, int flags, int maxRecursions, size_t maxOutput)
 {
     char *buffer;
     size_t size;
 
     FILE *f = open_memstream(&buffer, &size);
-    CborError err = cbor_value_to_json_advance(f, it, flags);
+    CborError err = cbor_value_to_json_advance_budget(f, it, flags, maxRecursions, maxOutput);
     fclose(f);
 
 #if QT_VERSION >= QT_VERSION_CHECK(6, 11, 0)
@@ -269,6 +275,11 @@ CborError parseOne(CborValue *it, QString *parsed, int flags)
 
     free(buffer);
     return err;
+}
+
+CborError parseOne(CborValue *it, QString *parsed, int flags)
+{
+    return parseOneBudget(it, parsed, flags, -1, 0);
 }
 
 bool compareFailed = true;
@@ -819,6 +830,124 @@ void tst_ToJson::recursionLimit()
 {
     QFETCH(QByteArray, data);
     parseForError(data, CborErrorNestingTooDeep);
+}
+
+void tst_ToJson::runtimeRecursionLimit_data()
+{
+    QTest::addColumn<QByteArray>("data");
+    QTest::addColumn<int>("budget");
+    QTest::addColumn<QString>("expected");      // empty means CborErrorNestingTooDeep
+
+    const QByteArray nestedArrays(8, '\x81');
+    const QByteArray nestedTags(4, '\xc1');
+    QByteArray nestedMaps;
+    for (int i = 0; i < 4; ++i)
+        nestedMaps.append("\xa1\x60", 2);
+
+    QTest::newRow("scalar") << raw("\x00") << 1 << "0";
+    QTest::newRow("flat-array") << raw("\x83\x01\x02\x03") << 1 << "[1,2,3]";
+    QTest::newRow("arrays-too-deep") << nestedArrays + '\x00' << 4 << QString();
+    QTest::newRow("arrays-just-enough") << nestedArrays + '\x00' << 9 << "[[[[[[[[0]]]]]]]]";
+    QTest::newRow("arrays-default") << nestedArrays + '\x00' << -1 << "[[[[[[[[0]]]]]]]]";
+    QTest::newRow("tags-too-deep") << nestedTags + '\x00' << 2 << QString();
+    QTest::newRow("tags-just-enough") << nestedTags + '\x00' << 5 << "0";
+    QTest::newRow("maps-too-deep") << nestedMaps + '\x00' << 2 << QString();
+    QTest::newRow("maps-just-enough") << nestedMaps + '\x00' << 5
+                                      << "{\"\":{\"\":{\"\":{\"\":0}}}}";
+}
+
+void tst_ToJson::runtimeRecursionLimit()
+{
+    QFETCH(QByteArray, data);
+    QFETCH(int, budget);
+    QFETCH(QString, expected);
+
+    CborParser parser;
+    CborValue first;
+    CborError err = cbor_parser_init(reinterpret_cast<const quint8 *>(data.constData()),
+                                     data.length(), 0, &parser, &first);
+    QVERIFY2(!err, QByteArray("Got error \"") + cbor_error_string(err) + "\"");
+
+    QString parsed;
+    err = parseOneBudget(&first, &parsed, 0, budget, 0);
+    if (expected.isEmpty()) {
+        QCOMPARE(err, CborErrorNestingTooDeep);
+        // truncation assertion: no partial JSON may be committed on failure
+        QVERIFY(parsed.isEmpty());
+    } else {
+        QCOMPARE(err, CborNoError);
+        QCOMPARE(parsed, expected);
+    }
+}
+
+void tst_ToJson::outputBudget_data()
+{
+    QTest::addColumn<QByteArray>("data");
+    QTest::addColumn<int>("budget");            // 0 means unlimited
+    QTest::addColumn<QString>("expected");      // empty means CborErrorDataTooLarge
+
+    QTest::newRow("text-exact") << raw("\x65Hello") << 7 << "\"Hello\"";
+    QTest::newRow("text-truncated") << raw("\x65Hello") << 6 << QString();
+    QTest::newRow("text-unlimited") << raw("\x65Hello") << 0 << "\"Hello\"";
+    QTest::newRow("array-exact") << raw("\x83\x01\x02\x03") << 7 << "[1,2,3]";
+    QTest::newRow("array-truncated") << raw("\x83\x01\x02\x03") << 6 << QString();
+    QTest::newRow("nan-exact") << raw("\xfb\x7f\xf8\0\0\0\0\0\0") << 4 << "null";
+    QTest::newRow("nan-truncated") << raw("\xfb\x7f\xf8\0\0\0\0\0\0") << 3 << QString();
+    QTest::newRow("-inf-exact") << raw("\xfb\xff\xf0\0\0\0\0\0\0") << 4 << "null";
+    QTest::newRow("-inf-truncated") << raw("\xfb\xff\xf0\0\0\0\0\0\0") << 3 << QString();
+}
+
+void tst_ToJson::outputBudget()
+{
+    QFETCH(QByteArray, data);
+    QFETCH(int, budget);
+    QFETCH(QString, expected);
+
+    CborParser parser;
+    CborValue first;
+    CborError err = cbor_parser_init(reinterpret_cast<const quint8 *>(data.constData()),
+                                     data.length(), 0, &parser, &first);
+    QVERIFY2(!err, QByteArray("Got error \"") + cbor_error_string(err) + "\"");
+
+    QString parsed;
+    err = parseOneBudget(&first, &parsed, 0, -1, size_t(budget));
+    if (expected.isEmpty()) {
+        QCOMPARE(err, CborErrorDataTooLarge);
+        // truncation assertion: no partial JSON may be committed on failure
+        QVERIFY(parsed.isEmpty());
+    } else {
+        QCOMPARE(err, CborNoError);
+        QCOMPARE(parsed, expected);
+    }
+}
+
+void tst_ToJson::noPartialOutput_data()
+{
+    QTest::addColumn<QByteArray>("data");
+    QTest::addColumn<int>("error");
+
+    // errors that happen after some JSON was already produced
+    QTest::newRow("invalid-utf8") << raw("\x82\x61H\x61\xff") << int(CborErrorInvalidUtf8TextString);
+    QTest::newRow("non-string-key") << raw("\xa1\x00\x01") << int(CborErrorJsonObjectKeyNotString);
+    QTest::newRow("illegal-number") << raw("\x82\x01\x1c") << int(CborErrorIllegalNumber);
+}
+
+void tst_ToJson::noPartialOutput()
+{
+    QFETCH(QByteArray, data);
+    QFETCH(int, error);
+
+    CborParser parser;
+    CborValue first;
+    CborError err = cbor_parser_init(reinterpret_cast<const quint8 *>(data.constData()),
+                                     data.length(), 0, &parser, &first);
+    QVERIFY2(!err, QByteArray("Got error \"") + cbor_error_string(err) + "\"");
+
+    QString parsed;
+    err = parseOne(&first, &parsed, 0);
+    QCOMPARE(err, CborError(error));
+    // truncation assertion: a failed conversion commits no bytes at all
+    QVERIFY(parsed.isEmpty());
 }
 
 void tst_ToJson::invalidUtf8Strings_data()
